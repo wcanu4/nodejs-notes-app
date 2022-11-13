@@ -6,6 +6,27 @@ const NoteSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+
+    nombre: {
+      type: String,
+      required: true,
+    },
+
+    apellido: {
+      type: String,
+      required: true,
+    },
+
+    tiempo: {
+      type: Number,
+      required: true,
+    },
+
+    sueldo: {
+      type: Number,
+      required: true,
+    },
+
     description: {
       type: String,
       required: true,

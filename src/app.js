@@ -16,8 +16,11 @@ import notesRoutes from "./routes/notes.routes.js";
 import userRoutes from "./routes/auth.routes.js";
 import "./config/passport.js";
 
+
+
 // Initializations
 const app = express();
+
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // settings
@@ -51,7 +54,9 @@ app.use(passport.session());
 app.use(flash());
 
 // Global Variables
+
 app.use((req, res, next) => {
+
   res.locals.success_msg = req.flash("success_msg");
   res.locals.error_msg = req.flash("error_msg");
   res.locals.error = req.flash("error");

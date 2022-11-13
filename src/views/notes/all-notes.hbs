@@ -1,27 +1,79 @@
+<link rel="stylesheet" href="/css/ver.css">
+          
 <div class="row">
   {{#each notes}}
   <div class="col-md-3">
     <div class="card">
       <div class="card-body">
-        <h4 class="card-title d-flex justify-content-between align-items-center">
+        <h4 class="card-title d-flex justify-content-between align-items-center text-decoration-underline text-align-center">
+
+   
           {{ title }} <a href="/notes/edit/{{_id}}"><i class="fas fa-edit"></i></a>
         </h4>
+
+        <h4 class="card-title d-flex justify-content-between align-items-center">
+        Nombre:{{ nombre }} <a href="/notes/edit/{{_id}}"><i class=""></i></a>
+        </h4>
+
+        <h4 class="card-title d-flex justify-content-between align-items-center">
+        Apellido:{{ apellido }} <a href="/notes/edit/{{_id}}"><i class=""></i></a>
+        </h4>
+
+        <h4 class="card-title d-flex justify-content-between align-items-center">
+        Tiempo trabajo:{{ tiempo }} <a href="/notes/edit/{{_id}}"><i class=""></i></a>
+        </h4>
+
+        <h4 class="card-title d-flex justify-content-between align-items-center">
+        Salario mensual:{{ sueldo }} <a href="/notes/edit/{{_id}}"><i class=""></i></a>
+        </h4>
+
+
         <p>{{ description }} </p>
+        <table>
+
+          <tr><td>INGRESOS</td>
+          <td></td></tr>
+          <tr><td>Sueldo base:</td> <td>Q36,000</td></tr>
+          <tr><td>Bonificacion:</td> <td>Q3,000.00</td></tr>
+          <tr><td>Bono 14:</td> <td>{{sueldo}}</td></tr>
+          <tr><td>Aguimaldo:</td> <td>{{sueldo}}</td></tr>
+          <tr><td>Total de ingreso:</td><td>Q45,000.00</td></tr>
+
+          <tr><td>_________________</td> <td></td></tr>
+
+          <tr><td>DEDUCCIÓNES:</td> <td></td></tr>
+          <tr><td>Bono 14:</td> <td>{{sueldo}}</td></tr>
+          <tr><td>Aguinaldo:</td> <td>{{sueldo}}</td></tr>
+          <tr><td>IGSS:</td> <td>Q 1,738.8</td></tr>
+          <tr><td> Total deducciónes:</td><td>Q 7,738.80</td></tr>
+          <tr><td>_________________</td> <td></td></tr>
+          <tr><td>Renta Afectada:</td><td>Q 37,261.20</td></tr>
+          <tr><td>ISR Anual:</td> <td>Q1,863.06</td></tr>
+          <tr><td>Retencion de isr Mensual:</td><td>Q155.25</td></tr>
+          <tr><td>_________________</td> <td></td></tr>
+        </table>
+
+        
+         
+
         <!-- DELETE REQUEST -->
         <form action="/notes/delete/{{_id}}?_method=DELETE" method="POST">
           <input type="hidden" name="_method" value="DELETE">
-          <button type="submit" class="btn btn-danger btn-block btn-sm">Delete</button>
+          <center><button type="submit" class="btn">Eliminar</button></center>
         </form>
       </div>
     </div>
   </div>
+
   {{else}}
   <div class="card mx-auto">
     <div class="card-body">
-      <h1>Hello {{user.name}}</h1>
-      <p clsss="lead">There are not Notes yet.</p>
-      <a href="/notes/add" class="btn btn-success btn-block">Create One!</a>
+      <h1>Calculo {{user.name}}</h1>
+      <p clsss="lead">No hay datos aun</p>
+      <a href="/notes/add" class="btn btn-success btn-block">Crear dato</a>
     </div>
   </div>
   {{/each}}
+  <script src="/helpers/calculo.js"></script>
+
 </div>

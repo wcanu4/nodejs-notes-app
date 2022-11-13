@@ -3,7 +3,7 @@ import Note from "../models/Note.js";
 export const renderNoteForm = (req, res) => res.render("notes/new-note");
 
 export const createNewNote = async (req, res) => {
-  const { title, description } = req.body;
+  const { title, nombre, apellido, tiempo, sueldo, description } = req.body;
   const errors = [];
   if (!title) {
     errors.push({ text: "Please Write a Title." });
@@ -15,10 +15,14 @@ export const createNewNote = async (req, res) => {
     return res.render("notes/new-note", {
       errors,
       title,
+      nombre,
+      apellido,
+      tiempo,
+      sueldo,
       description,
     });
 
-  const newNote = new Note({ title, description });
+  const newNote = new Note({ title, nombre, apellido, tiempo, sueldo, description });
   newNote.user = req.user.id;
   await newNote.save();
   req.flash("success_msg", "Note Added Successfully");
@@ -42,8 +46,8 @@ export const renderEditForm = async (req, res) => {
 };
 
 export const updateNote = async (req, res) => {
-  const { title, description } = req.body;
-  await Note.findByIdAndUpdate(req.params.id, { title, description });
+  const { title, nombre, apellido, tiempo, sueldo, description } = req.body;
+  await Note.findByIdAndUpdate(req.params.id, { title, nombre, apellido, tiempo, sueldo, description });
   req.flash("success_msg", "Note Updated Successfully");
   res.redirect("/notes");
 };

@@ -1,0 +1,13 @@
+.col-md-4{
+    background-color: blue;
+
+}
+.btn-primary{
+    background-color: black;
+    color: aliceblue;
+}
+.btn-primary:hover{
+    background-color: rgb(48, 129, 187);
+    color: rgb(8, 9, 9);
+
+}

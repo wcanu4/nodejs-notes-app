@@ -1,0 +1,19 @@
+.card{
+    background-color: aqua;
+
+}
+
+.card-body{
+    background-color: rgb(70, 141, 185);
+
+}
+.btn{
+    background-color: rgb(13, 13, 152);
+    color: aliceblue;
+}
+
+.btn:hover{
+    background-color: rgb(189, 213, 224);
+    color: rgb(11, 60, 103);
+    text-align: center;
+}

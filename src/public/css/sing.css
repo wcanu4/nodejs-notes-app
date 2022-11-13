@@ -1,0 +1,22 @@
+.btn-block{
+    background-color: blue;
+    color: azure;
+    
+
+}
+
+.btn-block:hover{
+    background-color: azure;
+    color: blue;
+    
+
+}
+.row{
+    background-color: rgb(20, 12, 56);
+}
+.card{
+    background-color: rgb(11, 89, 123);
+}
+.form-control{
+    background-color: rgb(89, 118, 132);
+}

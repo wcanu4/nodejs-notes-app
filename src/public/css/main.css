@@ -1,5 +1,5 @@
 body {
-  background: #121212;
+  background: #8a7d7d;
 }
 
 .logo {
@@ -7,5 +7,34 @@ body {
 }
 
 .bg-black {
-  background: #090909;
+  background: #301367;
+}
+.card{
+  background-color: #390b89;
+  color: aliceblue;
+}
+h1{
+  text-decoration: underline;
+  position: relative;
+  align-items: center;
+  padding: 20px;
+  color: white;
+  text-align: center;
+
+}
+h2{
+  text-decoration: rosybrown;
+  position: relative;
+  align-items: center;
+  padding: 20px;
+  color: white;
+  text-align: center;
+
+}
+.copyright {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8em;
+  margin: 0 0 2em 0;
+  padding: 0;
+  text-align: center;
 }

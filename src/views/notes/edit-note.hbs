@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="/css/calculo.css">
+
 {{#each errors}}
   <div class="alert alert-danger alert-dismissible fade show" role="alert">
     {{text}}
@@ -10,13 +12,13 @@
 <div class="col-md-4 mx-auto">
   <div class="card">
     <div class="card-header text-center">
-      <h3>Edit Note</h3>
+      <h3>Editar</h3>
     </div>
     <div class="card-body">
       <form action="/notes/edit-note/{{note._id}}?_method=PUT" method="POST">
         <input type="hidden" name="_method" value="PUT" />
         <div class="mb-3">
-          <label for="title">Title:</label>
+          <label for="title">Titulo:</label>
           <input
             type="text"
             name="title"
@@ -24,6 +26,50 @@
             value="{{note.title}}"
           />
         </div>
+
+        <div class="mb-3">
+          <label for="title">Nombre:</label>
+          <input
+            type="text"
+            name="nombre"
+            class="form-control"
+            value="{{note.nombre}}"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="title">Apellido:</label>
+          <input
+            type="text"
+            name="apellido"
+            class="form-control"
+            value="{{note.apellido}}"
+          />
+        </div>
+
+
+        <div class="mb-3">
+          <label for="title">Tiempo:</label>
+          <input
+            type="text"
+            name="tiempo"
+            class="form-control"
+            value="{{note.tiempo}}"
+          />
+        </div>
+
+
+        <div class="mb-3">
+          <label for="title">Sueldo:</label>
+          <input
+            type="text"
+            name="sueldo"
+            class="form-control"
+            value="{{note.sueldo}}"
+          />
+        </div>
+
+
         <div class="mb-3">
           <label for="description">Description:</label>
           <textarea

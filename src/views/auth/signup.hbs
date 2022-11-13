@@ -1,20 +1,26 @@
+<link rel="stylesheet" href="/css/sing.css">
 <div class="row">
   <div class="col-md-4 mx-auto">
-    <div class="card bg-black text-white">
+    <div class="card">
       <div class="card-header pt-5">
         <h4 class="text-center">
-          Account Register
+          Registrar cuenta
         </h4>
       </div>
+      <img
+        class="rounded-circle mx-auto d-block logo m-4"
+        src="/img/logo.png"
+        alt="Logo"
+      />
       <div class="card-body">
         <form action="/auth/signup" method="POST">
           <div class="mb-3">
-            <label for="name">Name:</label>
+            <label for="name">Nombre:</label>
             <input
               type="text"
-              class="form-control bg-dark text-white"
+              class="form-control"
               name="name"
-              placeholder="Name"
+              placeholder="Nombre"
               value="{{name}}"
             />
           </div>
@@ -22,7 +28,7 @@
             <label for="email">Email:</label>
             <input
               type="email"
-              class="form-control bg-dark text-white"
+              class="form-control"
               name="email"
               placeholder="Email"
               value="{{email}}"
@@ -32,7 +38,7 @@
             <label for="password">Password</label>
             <input
               type="password"
-              class="form-control bg-dark text-white"
+              class="form-control"
               name="password"
               placeholder="Password"
               value="{{password}}"
@@ -42,19 +48,19 @@
             <label for="confirm_password">Cofirm Password:</label>
             <input
               type="password"
-              class="form-control bg-dark text-white"
+              class="form-control"
               name="confirm_password"
               placeholder="Confirm Password"
               value="{{confirm_password}}"
             />
           </div>
-          <button class="btn btn-success btn-block">
-            Signup
-          </button>
+          <center><button class="btn-block">
+            Registrarse
+          </button></center>
         </form>
       </div>
-      <p class="text-center">Already Have an Account?
-        <a href="/auth/signin" class="text-info">Login</a></p>
+      <p class="text-center">¿Ya tienes una cuenta?
+        <a href="/auth/signin" class="text-info">Iniciar sesión</a></p>
     </div>
   </div>
 </div>
